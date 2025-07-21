@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Comparison - MediFluent</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%); }
+        .card-hover { transition: transform 0.3s ease-in-out; }
+        .card-hover:hover { transform: translateY(-5px); }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .mobile-menu { transition: transform 0.3s ease-in-out; }
+        .mobile-menu.hidden { transform: translateX(-100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">MediFluent</a>
+                
+                <!-- Mobile menu button -->
+                <button id="menuBtn" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Home</a>
+                    <a href="/medication" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Medications</a>
+                    <a href="/emergency" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Emergency</a>
+                    <a href="/consultation" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Consultation</a>
+                    <a href="/contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform duration-200">Contact Us</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileMenu" class="mobile-menu hidden bg-white absolute top-full left-0 right-0 shadow-lg border-t">
+                <div class="flex flex-col space-y-4 px-6 py-6">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                    <a href="/medication" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Medications</a>
+                    <a href="/emergency" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Emergency</a>
+                    <a href="/consultation" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Consultation</a>
+                    <a href="/contact" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors text-center">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section with gradient background -->
+        <div class="gradient-bg text-white py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-900 opacity-20"></div>
+            <div class="container mx-auto px-6 relative">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Medication Comparison</h1>
+                    <p class="text-xl md:text-2xl text-blue-100 mb-10">Find equivalent medications across different countries with our advanced comparison tools</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-semibold mb-4 text-center">Comprehensive Drug Database</h2>
+                        <p class="text-gray-600 leading-relaxed text-center">
+                            Access medications from around the globe, ensuring you can find the right alternatives for your prescriptions no matter where you are.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                        <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-semibold mb-4 text-center">Formula Analysis</h2>
+                        <p class="text-gray-600 leading-relaxed text-center">
+                            We analyze the active ingredients and formulations of your prescribed drugs to provide accurate equivalents available in other countries.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                        <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 h-8 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-semibold mb-4 text-center">User-Friendly Interface</h2>
+                        <p class="text-gray-600 leading-relaxed text-center">
+                            Easily search and compare medications with our intuitive interface, designed to make finding drug alternatives simple and straightforward.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center mt-16">
+                    <a href="/chatbot" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 inline-block">
+                        Start Comparing Medications
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when window is resized to desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

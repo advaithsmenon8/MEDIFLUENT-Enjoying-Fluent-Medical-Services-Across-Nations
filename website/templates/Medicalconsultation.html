@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFluent - Medical Consultation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .mobile-menu { transition: transform 0.3s ease-in-out; }
+        .mobile-menu.hidden { transform: translateX(-100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">MediFluent</a>
+                
+                <!-- Mobile menu button -->
+                <button id="menuBtn" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Home</a>
+                    <a href="/medication" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Medication Comparison</a>
+                    <a href="/emergency" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Emergency Response</a>
+                    <a href="/consultation" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">Medical Consultation</a>
+                    <a href="/contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-transform duration-200">Contact Us</a>
+                </nav>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileMenu" class="mobile-menu hidden bg-white absolute top-full left-0 right-0 shadow-lg border-t">
+                <div class="flex flex-col space-y-4 px-6 py-6">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+                    <a href="/medication" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Medication Comparison</a>
+                    <a href="/emergency" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Emergency Response</a>
+                    <a href="/consultation" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Medical Consultation</a>
+                    <a href="/contact" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors text-center">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when window is resized to desktop view
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <main class="container mx-auto px-4 py-8 pt-24">
+        <h1 class="text-3xl font-bold mb-8 text-center">Comprehensive Medical Consultation</h1>
+        
+        <!-- Hospital Locator Section -->
+        <section class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Find Nearest Hospital Within 20km</h2>
+            <p class="mb-4 text-gray-700">Click the button below to access the location page to find hospitals near you:</p>
+            
+            <!-- Button to direct to location page -->
+            <div class="flex justify-center">
+                <a href="/location" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-full text-lg font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+                    Find Nearest Hospital
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

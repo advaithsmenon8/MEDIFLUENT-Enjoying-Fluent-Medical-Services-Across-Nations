@@ -1,76 +1,115 @@
-# MediFluent: AI-Supported Predictive Healthcare Platform for Travelers and Expatriates
-## Abstract
+# 🩺 MediFluent  
+> *Enjoying Fluent Medical Services Across Nations*  
 
-MediFluent is a healthcare platform designed to serve the medical needs of foreign visitors and
-expatriates through a user-friendly interface that resolves common issues faced when accessing
-unfamiliar medical systems abroad. During emergencies, patients often lack crucial medical
-information, which can delay or impair treatment. MediFluent provides an emergency response
-feature that helps users locate essential medical facilities while traveling remotely or in unknown
-locations.
-The platform addresses challenges that disrupt patient care and communication, which negatively
-affect recovery outcomes. Key features include AI chatbot-guided health consultations, a drug
-information system that identifies comparable medications and manages drug interactions, and
-quick emergency support coordinated by specialized medical teams. These services reduce search
-times, prescription errors, and medical costs by automating responses to common queries and
-enabling healthcare professionals to focus on complex cases.
-MediFluent's cross-border health service initially aimed at foreign visitors now extends its benefits to
-global patient populations, contributing to the modernization of healthcare operations and improved
-worldwide medical results.
 ---
-# Keywords
 
-Healthcare, AI, Chatbots, Telemedicine, Drug Interaction, Emergency Response, Expatriates,Global Health
+## 📘 Overview  
+**MediFluent** is a web-based healthcare platform designed to help **international travelers and expatriates** access medical services across borders.  
+It bridges language barriers, medication availability issues, and emergency response challenges through three integrated features:
+- **Medication Equivalence**
+- **Emergency Response**
+- **Medical Consultation**
+
+By combining AI, real-time location services, and multilingual support, MediFluent ensures **fluent medical care anywhere in the world**.
+
 ---
-## Introduction
-Accessing healthcare abroad poses significant challenges due to unfamiliar medical procedures,
-language barriers, and complex insurance policies. Expatriates and travelers often face delays,
-incorrect prescriptions, and difficulty locating emergency care, leading to poor health outcomes.
-MediFluent improves global healthcare delivery through integrated AI-powered features including:
-- A drug search engine that identifies substitute medications internationally,
-- Emergency response coordination using Google Maps API to locate nearby medical facilities,
-- AI-driven chatbots for immediate medical consultations and health guidance,
-- Drug interaction and side-effect analysis for safer medication use.
-The platform leverages advanced AI models, such as LLaMA 3 trained on global pharmaceutical
-data, to ensure accurate and personalized healthcare assistance. It supports multilingual users and
-aims to reduce healthcare barriers for underserved populations worldwide.
+
+## ✨ Key Features  
+
+### 💊 Medication Equivalence  
+Find equivalent medicines available in your destination country — ensuring continuity of treatment and avoiding confusion.  
+
+### 🚑 Emergency Response  
+Access real-time **local emergency information** including nearest hospitals, ambulance services, and first-response guidance.  
+Powered by **Google Maps API** for live location-based service.  
+
+### 🏥 Medical Consultation  
+Locate nearby clinics and hospitals using GPS-based search, providing verified and contactable facilities instantly.  
+
+### 🤖 AI Health Assistant  
+Smart chatbot powered by AI to provide:  
+- Drug interaction checks  
+- Side-effect lookups  
+- Symptom-based home remedies  
+- Health information summaries  
+
 ---
-## Features
-- *Emergency Facility Locator:* Quickly find hospitals and clinics nearby via integrated maps.
-- *AI Chatbot:* Provides health advice, answers common questions, and reduces healthcare
-provider workload.- *Drug Equivalency Search:* Helps identify international drug substitutes.
-- *Drug Interaction Analysis:* Informs users about possible side effects and medication
-interactions.
-- *Medical Consultation:* Automated, immediate responses to typical health concerns.
-- *Multilingual Support:* Accessible to a global audience.
+
+## 🧰 Tech Stack  
+
+| Category | Tools Used |
+|-----------|-------------|
+| **Frontend** | HTML, CSS, Bootstrap, Tailwind CSS |
+| **Backend** | Python (Flask Framework) |
+| **Database** | MySQL |
+| **APIs** | Google Maps API |
+| **IDE** | Visual Studio Code |
+
 ---
-# Algorithm Overview
-The AI-driven system processes user queries such as drug equivalency, emergency support,
-drug-drug interactions, and home remedies. It tokenizes and semantically analyzes input, identifies
-query types, and retrieves data from pharmaceutical databases, Google Maps API, and verified
-medical datasets. The AI model then generates structured, relevant responses displayed via the
-web interface. User queries are logged for continuous improvement, and error handling ensures
-smooth operation.
+
+## 📊 Performance Analysis  
+
+| Model | Accuracy | Precision | Recall | F1 Score |
+|--------|-----------|-----------|---------|-----------|
+| **LLaMA 3** | 🥇 0.93 | 0.92 | 0.90 | 0.91 |
+| **BERT** | 0.74 | 0.75 | 0.70 | 0.72 |
+| **GPT-2** | 0.79 | 0.80 | 0.77 | 0.78 |
+| **CNN** | 0.63 | 0.60 | 0.65 | 0.62 |
+| **Random Forest** | 0.71 | 0.68 | 0.70 | 0.69 |
+
+**🏆 LLaMA 3** demonstrated superior contextual understanding and precision, making it the chosen AI model for MediFluent’s health intelligence module.  
+
 ---
-# Datasets
-MediFluent uses curated datasets including:
-- Emergency contact information with names, phone numbers, emails, and relationships for
-communication patterns.
-- Drug side effects dataset from Drugs.com providing medication categories and severity of side
-effects for safety evaluations.
-- Multiple structured and unstructured healthcare datasets to enhance patient care and operational
-insights.
----# Evaluation and Results
-The system delivers precise data on medical comparisons, drug interactions, and side effects,
-enabling personalized treatment recommendations and emergency handling tailored to user health
-needs. Its deep learning approach surpasses conventional mobile apps in accuracy and usability.
+
+## 🚀 Future Enhancements  
+
+- 🔄 **Offline Mode:** Access emergency data and prescriptions without internet.  
+- 🩹 **Personalized Health Tips:** Smart health recommendations based on user profile and travel region.  
+- 🌐 **Multilingual Support:** Real-time translation for emergency assistance.  
+- 📱 **Telemedicine Integration:** Enable remote consultation with verified doctors.  
+
 ---
-# Conclusion and Future Scope
-MediFluent revolutionizes healthcare access for travelers and migrants by integrating emergency
-medication equivalence, drug interaction analysis, and AI-driven medical support using LLaMA3. It
-monitors over 1,000 drug mixtures, preventing fatal adverse effects and empowering users to make
-informed health decisions globally.
-Future enhancements will incorporate connected data integration, remote appointment scheduling,
-AI-operated health devices, and digital guidance from healthcare professionals. The platform
-currently supports students and educators and aims for worldwide expansion with pilot studies
-validating user engagement and satisfaction.
+
+## 🧑‍💻 Project Team  
+
+| Name |
+|------|
+| **Advaith S Menon** |
+| **Alan J Roy** |
+| **Asim Zaman M N** |
+| **Fizaa A Riffai** |
+
+**Guided by:**  
+👩‍🏫 *Dr. Divya James* – Associate Professor, Department of Computer Science & Business Systems  
+
 ---
+
+## 🏫 Institution  
+
+**Rajagiri School of Engineering & Technology (Autonomous)**  
+Department of Computer Science and Business Systems  
+📍 *Rajagiri Valley, Kakkanad, Kochi – 682039*  
+📅 *November 2024*  
+
+---
+
+## 📜 License  
+This project was developed as part of the **Mini Project** requirement for the  
+**B.Tech in Computer Science and Business Systems (2024-2025)** at RSET.  
+
+---
+
+## 🌟 Screenshots  
+
+| Feature | Screenshot |
+|----------|-------------|
+| Sign-Up Page | ![Sign Up](images/signup.png) |
+| Medication Equivalency | ![Medication Equivalency](images/medication_equivalence.png) |
+| Emergency Response | ![Emergency](images/emergency_response.png) |
+| AI Chatbot | ![Chatbot](images/chatbot.png) |
+| Consultation | ![Consultation](images/consultation.png) |
+
+---
+
+### 💬 Feedback  
+If you find **MediFluent** interesting, feel free to ⭐ this repository and share your thoughts!  
